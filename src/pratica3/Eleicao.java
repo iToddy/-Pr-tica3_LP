@@ -110,6 +110,7 @@ public class Eleicao extends JFrame {
 				int votesTotal=0;
 				
 				voteDeclaration = textField.getText();
+				Integer.parseInt(voteDeclaration);
 				
 				while (voteDeclaration > 0) {
 					if (voteDeclaration == "20") {
