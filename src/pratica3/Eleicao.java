@@ -110,7 +110,6 @@ public class Eleicao extends JFrame {
 				int votesTotal=0;
 				
 				voteDeclaration = textField.getText();
-				Integer.parseInt(voteDeclaration);
 				
 				while (voteDeclaration == "20" ||voteDeclaration == "30" || voteDeclaration == "1" || voteDeclaration == "2" ) {
 					if (voteDeclaration == "20") {
@@ -126,7 +125,7 @@ public class Eleicao extends JFrame {
 				votesNulo++;
 				JOptionPane.showMessageDialog(null, "O seu voto foi anulado" ,"VOTO FINALIZADO",JOptionPane.INFORMATION_MESSAGE);
 			} else {
-				JOptionPane.showMessageDialog(null, "Candidato nao existe, vote novamente","ERRO",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Candidato nao existe, vote novamente","ERRO",JOptionPane.ERROR_MESSAGE);
 			}
 			if (voteDeclaration == "20" ||voteDeclaration == "30" || voteDeclaration == "1" || voteDeclaration == "2" )	{
 				votesTotal++;
