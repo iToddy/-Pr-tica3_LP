@@ -112,7 +112,7 @@ public class Eleicao extends JFrame {
 				voteDeclaration = textField.getText();
 				Integer.parseInt(voteDeclaration);
 				
-				while (voteDeclaration > 0) {
+				while (voteDeclaration == "20" ||voteDeclaration == "30" || voteDeclaration == "1" || voteDeclaration == "2" ) {
 					if (voteDeclaration == "20") {
 						votesMaria++;
 						JOptionPane.showMessageDialog(null, "O seu voto foi finalizado para a candidata Maria" ,"VOTO FINALIZADO",JOptionPane.INFORMATION_MESSAGE);
@@ -126,16 +126,16 @@ public class Eleicao extends JFrame {
 				votesNulo++;
 				JOptionPane.showMessageDialog(null, "O seu voto foi anulado" ,"VOTO FINALIZADO",JOptionPane.INFORMATION_MESSAGE);
 			} else {
-				JOptionPane.showMessageDialog(null, "Candidato nao existe, vote novamente",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Candidato nao existe, vote novamente","ERRO",JOptionPane.INFORMATION_MESSAGE);
 			}
 			if (voteDeclaration == "20" ||voteDeclaration == "30" || voteDeclaration == "1" || voteDeclaration == "2" )	{
 				votesTotal++;
 			}
 			
-			JOptionPane.showMessageDialog(null, "Vote novamente ou tecle -1 para terminar ",JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Vote novamente ou tecle -1 para terminar ","INFORMÇÃO",JOptionPane.INFORMATION_MESSAGE);
 
 		}
-				JOptionPane.showMessageDialog(null, "Resultado! ",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Resultado! ","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Número total de votos ="+votesTotal+"  --100%" ,"ATENÇÃO",JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Número  de votos Maria ="+votesMaria +" " + (votesMaria*(votesTotal/100)+"%") ,"ATENÇÃO",JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Número  de votos Pedro ="+votesPedro +" " + (votesPedro*(votesTotal/100)+"%") ,"ATENÇÃO",JOptionPane.ERROR_MESSAGE);
